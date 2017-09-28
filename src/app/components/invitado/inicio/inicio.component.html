@@ -1,0 +1,124 @@
+<header>
+
+    <wankar-header></wankar-header>
+    <!--Mask-->
+    <div class="view hm-cyan-strong">
+        <div class="full-bg-img flex-center">
+            <div class="container">
+                <div class="row" id="home">
+                    <!--First column-->
+                    <div class="col-lg-5">
+                        <div class="description">
+                            <h2 class="h2-responsive wow fadeInLeft"> Aprende un idioma en un día. </h2>
+                            <hr class="hr-dark wow fadeInLeft">
+                            <p class="wow fadeInLeft" data-wow-delay="0.4s">Escoge uno de los cursos y aprende de manera fácil por medio de frases, ésta es tu mejor opción!.</p>
+                            <br>
+                            <a class="btn btn-primary btn-lg wow fadeInLeft" data-wow-delay="0.7s" [routerLink]="['/cursos']"><i class="fa fa-flag left"></i> Idiomas</a>
+                        </div>
+                    </div>
+                    <!--/.First column-->
+
+                    <!--Second column-->
+                    <div class="col-lg-7">
+                        <login-form *ngIf="!isLogged"></login-form>
+                        <!--<router-outlet></router-outlet>-->
+                    </div>
+                    <!--/Second column-->
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <lista-cursos-inicio></lista-cursos-inicio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/.Mask-->
+</header>
+<!--<router-outlet></router-outlet>-->
+<div class="container">
+    <!--/Navigation & Intro-->
+    <!--NUESTROS CURSOS-->
+    <section class="section">
+        <!--Section heading-->
+        <!--h1 class="section-heading wow fadeInDown">Nuestros Cursos</h1-->
+        <!--Section description-->
+        <!--p class="section-description wow fadeInDown">Registrate en uno de nuestros cursos quea sdjash dkajshdaksjdhkjqwhd kasdh akjsd.</p-->
+
+        <!--div class="container">
+            <lista-cursos-inicio></lista-cursos-inicio>
+        </div-->
+
+    </section>
+    <!--LISTADO DE IDIOMAS-->
+    <!--<section class="section">
+        <h1 class="section-heading">Idiomas</h1>
+        <div class="row">
+            <div class="container">
+                <lista-idiomas-inicio></lista-idiomas-inicio>
+            </div>
+        </div>
+    </section>-->
+    <!--NUESTRAS FACILIDADES-->
+    <section class="section feature-box">
+        <!--Section heading-->
+        <h1 class="section-heading wow fadeInDown">Nuestros Servicios</h1>
+        <!--Section sescription-->
+        <p class="section-description lead wow fadeInUp">Wankar esta orientado al aprendizaje de idiomas de manera interactiva ..</p>
+
+        <!--First row-->
+        <div class="row features-small">
+            <!--First column-->
+            <div class="col-md-5 mb-r center-on-small-only wow fadeInLeft">
+                <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/ipad1.jpg" alt="" class="z-depth-0">
+            </div>
+            <!--/First column-->
+
+            <!--Second column-->
+            <div class="col-md-7 center-on-small">
+                <!--First row-->
+                <div class="row">
+                    <div class="col">
+                        <h4 class="feature-title wow fadeInUp"><i class="fa fa-bank indigo-text"></i> Seguridad</h4>
+                        <p class="grey-text wow fadeInUp">Nuestros datos estan protegidos y skjdhskjh qkwjehqwjkhe sdhkjasdjkh kjqwhe kjhdjkahs djhqwkjehqwjk
+                            e d skjdhqjkwhe qwe.</p>
+                    </div>
+                </div>
+                <!--/First row-->
+
+                <div style="height:50px"></div>
+
+                <!--Second row-->
+                <div class="row">
+                    <div class="col">
+                        <h4 class="feature-title wow fadeInUp"><i class="fa fa-code indigo-text"></i> Tecnología</h4>
+                        <p class="grey-text wow fadeInUp">Contamos con sistemas modernizados de sdjklh sdqjhwejh kashdkjashd qwe wekh jsd wjehqkjwheqwe kjhasdjashd
+                            sjwkjehwe.
+                        </p>
+                    </div>
+                </div>
+                <!--/Second row-->
+
+                <div style="height:50px"></div>
+
+                <!--Third row-->
+                <div class="row">
+                    <div class="col">
+                        <h4 class="feature-title wow fadeInUp"><i class="fa fa-money indigo-text"></i> Finanzas</h4>
+                        <p class="grey-text wow fadeInUp">Su dinero esta seguro .kljasdla sdlqw lqhwjkdh sdqkwjdh akshd qlwkhjlak dfhdkf dkfhkjewh fkjdshfkjshdfkjweh
+                            fkwjhf kjsdfhsdf.</p>
+                    </div>
+                </div>
+                <!--/Third row-->
+            </div>
+            <!--/Second column-->
+
+        </div>
+        <!--/First row-->
+
+    </section>
+
+</div>
+
+
+<wankar-footer></wankar-footer>

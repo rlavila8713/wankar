@@ -1,0 +1,32 @@
+<main>
+  <div class="main-wrapper">
+    <div class="container container-fluid flex-center">
+      <div class="row full-height justify-content-center" [hidden]="changeForm.submited">
+        <!--Form-->
+        <div class="card form-card">
+          <div class="card-block">
+            <!--Header-->
+            <div class="text-center">
+              <h3>Cambiar contraseña</h3>
+            </div>
+            <change_pass-form #changeForm></change_pass-form>
+          </div>
+        </div>
+        <!--/.Form-->
+      </div>
+      <!--IF SUBMITED-->
+      <div class="row full-height justify-content-center" [hidden]="!changeForm.submited">
+        <div class="d-block">
+          <div class="card card-info text-center mb-1">
+            <div class="card-block">
+              <p class="white-text mb-0">
+                La contraseña se cambió con éxito
+              </p>
+            </div>
+          </div>
+          <div class="d-block"><back-btn class="flex-center"></back-btn></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

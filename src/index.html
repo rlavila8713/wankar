@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base href="/">
+  <title>Wankar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/simple-line-icons.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="assets/css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/styleyama.css" rel="stylesheet">
+  
+
+  <!-- Premium icons -->
+  <link href="assets/css/glyphicons.css" rel="stylesheet">
+  <link href="assets/css/glyphicons-filetypes.css" rel="stylesheet">
+  <link href="assets/css/glyphicons-social.css" rel="stylesheet">
+
+</head>
+
+<body onload="loadHandler()">
+  <app-root>
+    <div id="preloader">
+      <div id="load"></div>
+    </div>
+  </app-root>
+
+  <!--script src="assets/js/jquery.backstretch.min.js"></script-->
+  <!--cript src="assets/js/scripts.js"></script-->
+  <script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
+  <!--SMOOTH SCROLL-->
+  <link rel="stylesheet" href="assets/js/smoth-scroll.js">
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="assets/js/tether.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="assets/js/mdb.min.js"></script>
+  <!--WOW ANIMATIONS-->
+  <script type="text/javascript" src="assets/js/wow.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      new WOW().init();
+    });
+
+    function loadHandler() {
+      $("#preloader").delay(100).fadeOut("slow");
+      $("#load").delay(100).fadeOut("slow");
+    }
+  </script>
+</body>
+
+
+</html>

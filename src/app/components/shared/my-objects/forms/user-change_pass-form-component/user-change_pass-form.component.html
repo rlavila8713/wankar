@@ -1,0 +1,30 @@
+<!--Body-->
+<form #changeForm="ngForm">
+  <div class="md-form">
+    <i class="fa fa-user prefix"></i>
+    <input type="text" id="usuario" class="form-control" readonly
+           value="{{user}}">
+    <label for="usuario" class="active">Usuario</label>
+  </div>
+
+  <div class="md-form">
+    <i class="fa fa-lock prefix"></i>
+    <input type="password" id="old_password" class="form-control" required
+           [(ngModel)]="model.old_password" name="old_password" #old_password>
+    <label for="old_password">Contraseña anterior</label>
+    <div [hidden]="errors.old_password==undefined" class="ml-5 input-error">{{errors.old_password}}</div>
+  </div>
+
+  <div class="md-form">
+    <i class="fa fa-lock prefix"></i>
+    <input type="password" id="password" class="form-control" required
+           [(ngModel)]="model.password" name="password" #password>
+    <label for="password">Contraseña nueva</label>
+    <div [hidden]="errors.password==undefined" class="ml-5 input-error">{{errors.password}}</div>
+  </div>
+
+  <div class="text-center">
+    <a class="btn btn-primary btn-lg {{changeForm.form.valid?'':'disabled'}}" (click)="onCambiar()">Cambiar</a>
+    <back-btn></back-btn>
+  </div>
+</form>

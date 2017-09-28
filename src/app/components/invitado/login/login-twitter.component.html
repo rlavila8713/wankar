@@ -1,0 +1,47 @@
+<main>
+    <div class="main-wrapper" style="padding-top: 6%;">
+        <div class="container container-fluid">
+            <div class="row full-height justify-content-center">
+                <!--Form-->
+                <div class="card col-md-8 col-md-offset-0">
+                    <div class="card-block {{isInicio?'wow fadeInRight':''}}">
+                        <!--Header-->
+                        <div class="text-center">
+                            <div class="form-header blue lighten-1">
+                                <h3><i class="fa fa-twitter"></i> Inserta tus datos de twitter</h3>
+                            </div>
+                        </div>
+                        <!--<div class="card">
+                    <div class="card-block">-->
+                        <!--Header-->
+                        <!--<div class="text-center">
+                            <h3>Inserta tus datos de twitter</h3>
+                            <hr>
+                        </div>-->
+
+                        <!--Body-->
+                        <div class="md-form">
+                            <i class="fa fa-twitter prefix"></i>
+                            <input type="email" id="usuario" class="form-control validate">
+                            <label for="usuario" data-error="valor incorrecto">Usuario</label>
+                        </div>
+
+                        <div class="md-form">
+                            <i class="fa fa-lock prefix"></i>
+                            <input type="password" id="pass" class="form-control validate">
+                            <label for="pass" data-error="valor incorrecto">Contraseña</label>
+                        </div>
+
+                        <div class="text-center">
+                            <a class="btn btn-primary btn-lg" (click)="onLogin()">Entrar</a>
+                            <back-btn></back-btn>
+                        </div>
+
+                    </div>
+                </div>
+                <!--/.Form-->
+            </div>
+            <!--/Second column-->
+        </div>
+    </div>
+</main>

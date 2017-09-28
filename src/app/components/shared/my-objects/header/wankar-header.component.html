@@ -1,0 +1,107 @@
+<!--Navbar-->
+<nav class="navbar navbar-toggleable-md navbar-dark fixed-top blue lighten-1 {{is_inicio?'scrolling-navbar':'top-nav-collapse'}}">
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <a class="navbar-brand waves-effect waves-light" routerLink="/"><strong>WANKAR <!--loading-ani></loading-ani--></strong></a>
+        <div class="collapse navbar-collapse" id="navbarNav1">
+            <!--<ul class="navbar-nav mr-auto">-->
+            <!--<li class="nav-item">-->
+            <!--<a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--Navbar icons-->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a routerLinkActive="active" [routerLink]="['/inicio']" class="nav-link waves-effect waves-light"><i
+            class="fa fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLinkActive="active" [routerLink]="['/invitado/foro']" class="nav-link waves-effect waves-light"><i
+            class="fa fa-book"></i> Foro</a>
+                </li>
+
+                <li *ngIf="is_logged" class="nav-item dropdown btn-group">
+                    <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Adm&iacute;n</a>
+                    <div class="dropdown-menu dropdown" aria-labelledby="dropdownMenu1">
+                        <h6 class="dropdown-header">Frases</h6>
+                        <a class="dropdown-item waves-effect waves-light" [routerLink]="['/logeado/sentence-list']">Listar
+              Frases</a>
+
+                        <h6 class="dropdown-header">Traducciones</h6>
+                        <a class="dropdown-item waves-effect waves-light" [routerLink]="['/logeado/translation-create']">Listar Traducciones</a>
+
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header">Palabras</h6>
+                        <a class="dropdown-item waves-effect waves-light">Listar
+              Palabras</a>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header">Idiomas</h6>
+                        <a class="dropdown-item waves-effect waves-light" [routerLink]="['/logeado/languaje-create']">Listar
+              idiomas</a>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header">Cursos</h6>
+                        <a class="dropdown-item waves-effect waves-light" [routerLink]="['/logeado/course-create']">Listar
+              cursos</a>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header">Clases</h6>
+                        <a class="dropdown-item waves-effect waves-light">Listar
+              clases</a>
+                    </div>
+                </li>
+            </ul>
+
+
+            <ul *ngIf="!is_logged" class="nav navbar-nav nav-flex-icons ml-auto">
+                <li class="nav-item dropdown btn-group">
+                    <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{identity}}</a>
+
+                    <div class="dropdown-menu dropdown" aria-labelledby="dropdownMenu1">
+                        <a class="dropdown-item waves-effect waves-light" [routerLink]="['/logeado/profile']">Crear Perfil</a>
+                        <a class="dropdown-item waves-effect waves-light" [routerLink]="['/logeado/profile-config']">Configuraci&oacute;n</a>
+                        <a class="dropdown-item waves-effect waves-light" href="#">Ayuda</a>
+                        <a class="dropdown-item waves-effect waves-light" href="#">Atajos de teclado</a>
+                        <a class="dropdown-item waves-effect waves-light" [routerLink]="['/inicio/login']">Ingresar</a>
+                    </div>
+                </li>
+                <label>
+                    <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" alt="Generic placeholder image"
+                        style="width:40px; height: 40px">
+                </label>
+                <!--label>
+                    <img class="rounded-circle" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/flags/1x1/es.svg" alt="Generic placeholder image"
+                        style="width:40px; height: 40px">
+                </label-->
+                <li class="nav-item">
+                    <!--create-profile-btn></create-profile-btn-->
+                </li>
+            </ul>
+
+            <ul *ngIf="is_logged" class="navbar-nav ml-auto nav-flex-icons">
+                <form class="form-inline waves-effect ml-auto waves-light">
+                    <div class="sm-form input-group">
+                        <input type="search" class="form-control" placeholder="Buscar...">
+                    </div>
+                </form>
+                <li class="nav-item dropdown btn-group">
+                    <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{identity}}</a>
+
+                    <div class="dropdown-menu dropdown" aria-labelledby="dropdownMenu1">
+                        <a class="dropdown-item waves-effect waves-light" [routerLink]="['/logeado/profile']">Perfil</a>
+                        <a class="dropdown-item waves-effect waves-light" [routerLink]="['/logeado/profile-config']">Configuraci&oacute;n</a>
+                        <a class="dropdown-item waves-effect waves-light" href="#">Ayuda</a>
+                        <a class="dropdown-item waves-effect waves-light" (click)="onSalir()">Salir</a>
+                    </div>
+                </li>
+                <label>
+                    <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" alt="Generic placeholder image"
+                        style="width:40px; height: 40px">
+                </label>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<!--/.Navbar-->

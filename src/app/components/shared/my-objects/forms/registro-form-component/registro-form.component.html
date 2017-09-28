@@ -1,0 +1,37 @@
+<!--Body-->
+<form #registroForm="ngForm">
+  <div class="md-form">
+    <i class="fa fa-user prefix"></i>
+    <input type="text" id="usuario" class="form-control" required [(ngModel)]="model.user" name="user" #user="ngModel">
+    <label for="usuario">Usuario</label>
+    <div [hidden]="errors.user==undefined" class="ml-5 input-error">{{errors.user}}</div>
+  </div>
+
+  <div class="md-form">
+    <i class="fa fa-envelope prefix"></i>
+    <input type="email" id="email" class="form-control" required email [(ngModel)]="model.email" name="email">
+    <label for="email">Email</label>
+    <div [hidden]="errors.email==undefined" class="ml-5 input-error">{{errors.email}}</div>
+  </div>
+
+  <div class="md-form">
+    <i class="fa fa-lock prefix"></i>
+    <input type="password" id="pass" class="form-control" required [(ngModel)]="model.password" name="password">
+    <label for="pass">Contraseña</label>
+    <div [hidden]="errors.password==undefined" class="ml-5 input-error">{{errors.password}}</div>
+  </div>
+  <div class="md-form">
+    <i class="fa fa-lock prefix"></i>
+    <input type="password" id="password2" name="password2" class="form-control">
+    <label for="password2">Escribe nuevamente la contraseña</label>
+  </div>
+  <div class="md-form">
+    <input type="checkbox" uncheked ([ngModel])="checked" /> Estoy de acuerdo con los
+    <a href="#">T&eacute;rminos y condiciones de <strong>Wankar</strong></a>
+  </div>
+
+  <div class="text-center">
+    <a class="btn btn-primary btn-lg {{registroForm.form.valid?'':'disabled'}}" (click)="onCrearCuenta()">Registrarme</a>
+    <back-btn></back-btn>
+  </div>
+</form>

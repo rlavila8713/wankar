@@ -1,0 +1,106 @@
+<main>
+  <div class="main-wrapper">
+    <div class="container container-fluid flex-center'">
+      <div class="row full-height justify-content-center" [hidden]="registroFrom.submited">
+        <!-- Horizontal Steppers -->
+        <div class="row">
+          <div class="col-md-12">
+
+            <!-- Stepers Wrapper -->
+            <ul class="stepper stepper-horizontal">
+
+              <!-- First Step -->
+              <li class="active">
+                <a>
+                  <span class="circle">1</span>
+                </a>
+              </li>
+
+              <!-- Second Step -->
+              <li>
+                <a>
+                  <span class="circle">2</span>
+                </a>
+              </li>
+
+              <!-- Third Step -->
+              <li>
+                <a>
+                  <span class="circle">3</span>
+                </a>
+              </li>
+
+            </ul>
+            <!-- /.Stepers Wrapper -->
+
+          </div>
+        </div>
+        <!-- /.Horizontal Steppers -->
+      </div>
+      <div class="row full-height justify-content-center" [hidden]="registroFrom.submited">
+        <!--Form-->
+        <div class="card col-md-8 col-md-offset-0">
+          <div class="card-block {{isInicio?'wow fadeInRight':''}}">
+            <!--Header-->
+            <div class="text-center">             
+              <div class="form-header blue lighten-1">
+                <h3><i class="fa fa-user"></i> Registro de usuario</h3>
+              </div>
+            </div>
+            <registro-form #registroFrom></registro-form>
+          </div>
+        </div>        
+        <!--/.Form-->
+      </div>
+
+      <div class="row full-height justify-content-center" [hidden]="!registroFrom.submited">
+        <!-- Horizontal Steppers -->
+        <div class="row">
+          <div class="col-md-12">
+
+            <!-- Stepers Wrapper -->
+            <ul class="stepper stepper-horizontal">
+
+              <!-- First Step -->
+              <li class="completed">
+                <a>
+                  <span class="circle">1</span>
+                </a>
+              </li>
+
+              <!-- Second Step -->
+              <li class="active">
+                <a>
+                  <span class="circle">2</span>
+                </a>
+              </li>
+
+              <!-- Third Step -->
+              <li>
+                <a>
+                  <span class="circle">3</span>
+                </a>
+              </li>
+
+            </ul>
+            <!-- /.Stepers Wrapper -->
+
+          </div>
+        </div>
+        <!-- /.Horizontal Steppers -->
+      </div>
+      <!--IF SUBMITED-->
+      <div class="row full-height justify-content-center" [hidden]="!registroFrom.submited">
+        <div class="card card-info text-center mb-1">
+          <div class="card-block">
+            <p class="white-text mb-0">
+              Hola <strong>{{registroFrom.model.user}}</strong>, hemos enviado un correo a la dirección
+              <strong>{{registroFrom.model.email}}</strong> para que verifiques tu usuario.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/Second column-->
+    </div>
+  </div>
+</main>
